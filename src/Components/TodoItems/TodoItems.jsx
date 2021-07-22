@@ -17,9 +17,7 @@ const TodoItems = ({ storedItems }) => {
       <div
         className={`${styles["todo-info"]} ${styles["todo-info-2"]} ${styles.show_items}`}
       >
-        <button id="show_items__all" focus="true">
-          All
-        </button>
+        <button id="show_items__all">All</button>
         <button id="show_items__active">Active</button>
         <button id="show_items__completed">Completed</button>
       </div>

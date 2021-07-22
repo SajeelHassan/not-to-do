@@ -81,3 +81,6 @@
   border: 10px solid var(--check-bkg);
   border: 10px solid var(--check-bkg);
 }
+.remove_Icon:hover {
+  cursor: pointer;
+}

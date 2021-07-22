@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import * as styles from "./TodoItem.module.css";
 import removeIcon from "../../assets/images/cross.png";
 const TodoItem = (props) => {
+  const removeItemHandler = () => {};
   return (
     <>
       <li
@@ -12,8 +13,8 @@ const TodoItem = (props) => {
       >
         <input type="checkbox" />
         <p>{props.title}</p>
-        <span>
-          <img src={removeIcon} />
+        <span className={styles.remove_Icon} onClick={removeItemHandler}>
+          <img src={removeIcon} alt="remove button" />
         </span>
       </li>
     </>
