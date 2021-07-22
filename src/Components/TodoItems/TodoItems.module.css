@@ -1,0 +1,71 @@
+.main {
+  z-index: 10;
+  margin-top: -30px;
+  border-radius: 10px;
+  width: 100%;
+  /* background-color: var(--default); */
+  /* yeah its a trick to handle sub elements */
+  height: 10rem;
+}
+.todo-items {
+  display: flex;
+  flex-direction: column;
+  width: var(--div-width-mob);
+  margin: 0 auto;
+  box-shadow: 0px 8px 16px 8px rgba(0, 0, 0, 0.2);
+}
+.todo-info {
+  margin: 0 auto;
+  display: inline-flex;
+  /* padding: 1rem; */
+  width: var(--div-width-mob);
+  background: var(--Very-Dark-Desaturated-Blue);
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  padding: 1.3rem 1rem;
+}
+.todo-info p {
+  font-size: 11px;
+  color: var(--Light-Grayish-Blue);
+  opacity: 0.3;
+  font-weight: 100;
+}
+
+.todo-info {
+  border-top: 1px solid rgba(92, 90, 90, 0.301);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.todo-info-2 {
+  display: flex;
+  margin: 1.2rem auto;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 8px 16px 8px rgba(0, 0, 0, 0.2);
+  /* justify-content: center; */
+  padding: 1.2rem 5rem;
+}
+.todo-info-2 > button {
+  border: none;
+  background: var(--Very-Dark-Desaturated-Blue);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--Dark-Grayish-Blue);
+  cursor: pointer;
+  outline: none;
+}
+.todo-info-2 > button:focus {
+  outline: none;
+  /* color: var(--primary-b-blue); */
+}
+.todo-info-2 > button:hover {
+  color: var(--primary-b-blue);
+}
+.todo-info-2 > button:active {
+  color: var(--primary-b-blue);
+}
+
+.nothing {
+  color: rgba(255, 255, 255, 0.623);
+  border-radius: 5px;
+}
