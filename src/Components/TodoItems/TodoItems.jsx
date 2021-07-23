@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import TodoItem from "../TodoItem/TodoItem.jsx";
 import * as styles from "./TodoItems.module.css";
 const TodoItems = ({ storedItems }) => {
+  const [isItemsNone, setIsItemsNone] = useState(false);
+
   return (
     <div id="main" className={styles.main}>
       <ul className={`${styles["todo-items"]} ${styles.shadow}`}>
-        {storedItems.map((item) => (
-          <TodoItem key={item.key} title={item.title} />
-        ))}
+        {!storedItems.length ? (
+          <div className={`${styles["nothing"]}`} id="nothing">
+            <h3>Nothing to Show Here Yet!</h3>
+          </div>
+        ) : (
+          storedItems.map((item) => (
+            <TodoItem key={item.key} title={item.title} />
+          ))
+        )}
+
         <div className={styles["todo-info"]}>
           <p className={styles["items-left"]}>5 items left</p>
           <p className={styles["clear-completed"]}>Clear Completed</p>

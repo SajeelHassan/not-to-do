@@ -67,8 +67,19 @@
 }
 
 .nothing {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
   color: rgba(255, 255, 255, 0.623);
   border-radius: 5px;
+  margin: 0 auto;
+  display: inline-flex;
+  padding: 1.3rem 1rem;
+  width: var(--div-width-mob);
+  background: var(--Very-Dark-Desaturated-Blue);
+  justify-content: space-around;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 100;
 }
 
 button:focus {
