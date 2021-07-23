@@ -3,7 +3,7 @@ import InputTodo from "../Input/Input";
 import * as styles from "./Header.module.css";
 import moonIcon from "../../assets/images/icon-moon.svg";
 import sunIcon from "../../assets/images/icon-sun.svg";
-const Header = () => {
+const Header = ({ addItemHandler }) => {
   const [darkMode, setDarkMode] = useState(false);
   const toggleThemeHandler = () => {
     setDarkMode((prevMode) => !prevMode);
@@ -27,7 +27,7 @@ const Header = () => {
               onClick={toggleThemeHandler}
             />
           </div>
-          <InputTodo />
+          <InputTodo addTodo={addItemHandler} />
         </div>
       </header>
     </>

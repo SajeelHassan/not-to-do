@@ -17,11 +17,11 @@
   padding: 0 0.3rem;
 }
 /* ---------------/ */
-/* to remove  */
-/* .todo-item:nth-child(1) > *:nth-child(2) {
+
+.checked {
   text-decoration: line-through;
   opacity: 30%;
-} */
+}
 /* ---------------/ */
 
 .todo-item > *:nth-child(1) {
