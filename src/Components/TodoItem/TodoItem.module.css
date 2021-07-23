@@ -18,10 +18,10 @@
 }
 /* ---------------/ */
 /* to remove  */
-.todo-item:nth-child(1) > *:nth-child(2) {
+/* .todo-item:nth-child(1) > *:nth-child(2) {
   text-decoration: line-through;
   opacity: 30%;
-}
+} */
 /* ---------------/ */
 
 .todo-item > *:nth-child(1) {
