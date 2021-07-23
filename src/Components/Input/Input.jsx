@@ -6,8 +6,10 @@ const InputTodo = ({ addTodo }) => {
   const textInput = useRef(null);
   const enterHandler = (e) => {
     if (e.key === "Enter") {
-      addTodo(textInput.current.value);
-      textInput.current.value = "";
+      if (textInput.current.value.length > 0) {
+        addTodo(textInput.current.value);
+        textInput.current.value = "";
+      }
     }
   };
   return (
@@ -23,6 +25,7 @@ const InputTodo = ({ addTodo }) => {
           <input
             ref={textInput}
             autoFocus={true}
+            autoComplete="off"
             type="text"
             name="task-1"
             id="create-task"

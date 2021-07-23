@@ -17,6 +17,9 @@ header {
   width: var(--div-width-mob);
   margin: 0 auto;
 }
+.modeImg {
+  cursor: pointer;
+}
 .d-flex {
   display: flex;
   flex-direction: column;

@@ -20,10 +20,11 @@ const Header = ({ addItemHandler }) => {
             ${styles["sa"]}
             }`}
           >
-            <h1>TODO</h1>
+            <h1>!TODO</h1>
             <img
               src={darkMode ? moonIcon : sunIcon}
               alt="todo list"
+              className={styles.modeImg}
               onClick={toggleThemeHandler}
             />
           </div>
