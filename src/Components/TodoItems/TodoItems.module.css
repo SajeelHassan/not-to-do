@@ -80,7 +80,12 @@
   font-size: 12px;
   font-weight: 100;
 }
-
+.clear-completed {
+  cursor: pointer;
+}
+.clear-completed:hover {
+  color: var(--primary-b-blue);
+}
 button:focus {
   color: var(--primary-b-blue);
 }
