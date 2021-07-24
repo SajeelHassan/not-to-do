@@ -3,25 +3,33 @@ import Header from "./Components/Header/Header.jsx";
 import TodoItems from "./Components/TodoItems/TodoItems.jsx";
 function App() {
   const [todos, setTodos] = useState([]);
-  const addTodo = (titleToAdd) => {
+  const AddTodo = (titleToAdd) => {
     setTodos([{ title: titleToAdd, active: true, key: Date.now() }, ...todos]);
   };
-  const removeTodo = () => {};
-  const completeTodo = (uKey) =>
+  const RemoveTodo = (uKey) => {
+    setTodos(todos.filter((todo) => todo.key !== uKey));
+  };
+  const CompleteTodo = (uKey) =>
     setTodos(
       todos.map((todo) =>
         todo.key === uKey ? { ...todo, active: !todo.active } : todo
       )
     );
-  const items = todos;
-  console.log(todos);
+  const RemoveCompleted = () => {
+    setTodos(todos.filter((todo) => todo.active === true));
+  };
   return (
     <>
-      <Header addItemHandler={addTodo} />
+      <Header addItemHandler={AddTodo} />
       <TodoItems
-        storedItems={items}
-        removeTodoHandler={removeTodo}
-        completeTodoHandler={completeTodo}
+        storedItems={todos}
+        allItems={todos}
+        removeTodoHandler={RemoveTodo}
+        completeTodoHandler={CompleteTodo}
+        removeCompletedHandler={RemoveCompleted}
+        // ShowAllHandler={ShowAll}
+        // ShowActiveHandler={ShowActive}
+        // ShowCompletedHandler={ShowCompleted}
       />
     </>
   );
