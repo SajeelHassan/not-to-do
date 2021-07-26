@@ -25,7 +25,8 @@ const TodoItems = ({
     setTodoItems(showCompleted);
   }, [showCompleted]);
   const ShowAll = () => {
-    setShowAll(storedItems);
+    let items = [...storedItems];
+    setShowAll(items);
   };
   const ShowCompleted = () => {
     let items = [...storedItems];
