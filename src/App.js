@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import Header from "./Components/Header/Header.jsx";
 import TodoItems from "./Components/TodoItems/TodoItems.jsx";
+import ThemeContext from './Context/theme-context';
 function App() {
   const [todos, setTodos] = useState([]);
+  const [isDarkMode,setIsDarkMode]=useState(true);
   const AddTodo = (titleToAdd) => {
     setTodos([{ title: titleToAdd, active: true, key: Date.now() }, ...todos]);
   };
@@ -18,8 +20,11 @@ function App() {
   const RemoveCompleted = () => {
     setTodos(todos.filter((todo) => todo.active === true));
   };
+  const toggleThemeHandler=()=>{
+    setIsDarkMode(prevVal=>!prevVal);
+  }
   return (
-    <>
+    <ThemeContext.Provider value = {{isDarkMode:isDarkMode,toggleTheme:toggleThemeHandler}}>
       <Header addItemHandler={AddTodo} />
       <TodoItems
         storedItems={todos}
@@ -27,11 +32,8 @@ function App() {
         removeTodoHandler={RemoveTodo}
         completeTodoHandler={CompleteTodo}
         removeCompletedHandler={RemoveCompleted}
-        // ShowAllHandler={ShowAll}
-        // ShowActiveHandler={ShowActive}
-        // ShowCompletedHandler={ShowCompleted}
       />
-    </>
+    </ThemeContext.Provider>
   );
 }
 

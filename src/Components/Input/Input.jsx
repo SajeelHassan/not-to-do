@@ -1,8 +1,10 @@
-import React, { useRef } from "react";
-
+import React, { useRef,useContext } from "react";
+import clsx from "clsx";
+import ThemeContext from '../../Context/theme-context';
 import * as styles from "./Input.module.css";
 
 const InputTodo = ({ addTodo }) => {
+  const darkMode=useContext(ThemeContext).isDarkMode;
   const textInput = useRef(null);
   const enterHandler = (e) => {
     if (e.key === "Enter") {
@@ -14,8 +16,8 @@ const InputTodo = ({ addTodo }) => {
   };
   return (
     <>
-      <div className={styles["task-input--wrap"]}>
-        <div className={styles["task-input"]}>
+      <div className={clsx(styles["task-input--wrap"])}>
+        <div className={clsx(darkMode?styles["task-input-dark"]:styles["task-input-light"],styles["task-input"])}>
           <input
             type="checkbox"
             unchecked="true"

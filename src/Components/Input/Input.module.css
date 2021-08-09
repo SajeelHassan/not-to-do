@@ -1,9 +1,15 @@
 .task-input-wrap {
   width: 90%;
 }
+.task-input-dark{
+  background: var(--Very-Dark-Desaturated-Blue);
+}
+.task-input-light{
+  background:var(--very-light-gray);
+}
 .task-input {
   /* margin: auto; */
-  background: var(--Very-Dark-Desaturated-Blue);
+  
   width: var(--div-width-mob);
   height: 45px;
   border-radius: 5px;
@@ -20,11 +26,18 @@
   appearance: none;
   width: 22px;
   height: 22px;
-  border: 0.5px solid var(--very-dark-grayish-blue);
-  border-radius: 50%;
   margin: 0 10px 0 16px;
 }
+.task-input-dark > *:nth-child(1){
+  border: 0.5px solid var(--very-dark-grayish-blue);
+  border-radius: 50%;
 
+}
+.task-input-light > *:nth-child(1){
+  border: 0.5px solid var(--light-grayish-blue);
+  border-radius: 50%;
+
+}
 .task-input > *:nth-child(2) {
   flex: 1 1 86%;
 }
@@ -35,8 +48,16 @@
   background-color: transparent;
   outline: none;
   border: none;
-  color: var(--Light-Grayish-Blue);
 }
+.task-input-dark input[type='text']{
+  color: var(--Light-Grayish-Blue);
+
+}
+.task-input-light input[type='text']{
+  color: var(--very-dark-grayish-blue);
+
+}
+
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: var(--Dark-Grayish-Blue);

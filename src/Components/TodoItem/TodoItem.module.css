@@ -1,9 +1,15 @@
+.todo-item-dark{
+  background: var(--Very-Dark-Desaturated-Blue);
+}
+.todo-item-light{
+  background: var(--very-light-gray);
+}
+
 .todo-item {
   margin: 0 auto;
   display: inline-flex;
   padding: 1.3rem 1rem;
   width: var(--div-width-mob);
-  background: var(--Very-Dark-Desaturated-Blue);
   justify-content: space-around;
   align-items: center;
   font-size: 0.75rem;
@@ -11,10 +17,17 @@
   outline: none;
   /* box-shadow: 0px 8px 16px 8px rgba(0, 0, 0, 0.2); */
 }
+.todo-item-dark >p{
+color:var(--Dark-Grayish-Blue);
+color: rgba(255, 255, 255, 0.623);
+
+}
+.todo-item-light>p{
+  color:var(--very-dark-grayish-blue);
+}
 .todo-item > p {
   /* opacity: 0.9; */
-  color: var(--Dark-Grayish-Blue);
-  color: rgba(255, 255, 255, 0.623);
+  /* color: var(--Dark-Grayish-Blue); */
   padding: 0 0.3rem;
 }
 /* ---------------/ */
@@ -48,15 +61,25 @@
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 }
-.todo-item:not(:last-child) {
+.todo-item-dark:not(:last-child) {
   border-top: 1px solid rgba(92, 90, 90, 0.301);
+}
+.todo-item-light:not(:last-child) {
+  border-top: 1px solid var(--very-light-grayish-blue);
 }
 .todo-item input[type="checkbox"] {
   appearance: none;
   width: 22px;
   height: 22px;
-  border-radius: 50%;
+ 
+}
+.todo-item-dark input[type='checkbox']{
   border: 0.5px solid var(--Very-Dark-Grayish-Blue);
+  border-radius: 50%;
+}
+.todo-item-light input[type='checkbox']{
+  border: 0.5px solid var(--light-grayish-blue);
+  border-radius: 50%;
 }
 .todo-item input[type="checkbox"]::after {
   content: "\2714";

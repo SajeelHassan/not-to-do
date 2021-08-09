@@ -1,12 +1,19 @@
-header {
+.headerLight {
   height: 14rem;
   background-color: hsl(0, 0%, 98%);
   background-image: url(../../assets/images/bg-desktop-dark.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-attachment: fixed; */
-  /* background-size: 100%; */
   color: var(--default);
+}
+.headerDark{
+  height: 14rem;
+  background-color: hsl(0, 0%, 98%);
+  background-image: url(../../assets/images/bg-desktop-light.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--default);
+
 }
 .head {
   width: 100%;
