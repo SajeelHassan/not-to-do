@@ -36,9 +36,21 @@
 }
 
 body {
-  background-color: var(--Very-Dark-Blue);
-  /* color: var(--default); */
   margin: 0;
+}
+.body-dark{
+  background-color: var(--Very-Dark-Blue);
+
+}
+.body-light{
+  background-color: var(--very-light-blue);
+
+}
+.body-bg{
+  position: absolute;
+  height:100%;
+  width:100%;
+  z-index:-1;
 }
 .d-flex {
   display: flex;

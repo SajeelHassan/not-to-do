@@ -23,7 +23,7 @@ const Header = ({ addItemHandler }) => {
             styles["sa"]
             )}
           >
-            <h1>!TODO</h1>
+            <h1>TODO</h1>
             <img
               src={darkMode ? sunIcon : moonIcon}
               alt="todo list"

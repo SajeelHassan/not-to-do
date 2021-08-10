@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import React, { useState } from "react";
 import Header from "./Components/Header/Header.jsx";
 import TodoItems from "./Components/TodoItems/TodoItems.jsx";
@@ -25,6 +26,7 @@ function App() {
   }
   return (
     <ThemeContext.Provider value = {{isDarkMode:isDarkMode,toggleTheme:toggleThemeHandler}}>
+      <div className={clsx(isDarkMode?'body-dark':'body-light','body-bg')}>
       <Header addItemHandler={AddTodo} />
       <TodoItems
         storedItems={todos}
@@ -33,6 +35,7 @@ function App() {
         completeTodoHandler={CompleteTodo}
         removeCompletedHandler={RemoveCompleted}
       />
+      </div>
     </ThemeContext.Provider>
   );
 }

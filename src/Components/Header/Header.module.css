@@ -46,3 +46,15 @@
 .f-space {
   justify-content: space-between;
 }
+
+@media (max-width:425px) {
+  .headerLight {
+    background-image: url(../../assets/images/bg-mobile-dark.jpg);
+   
+  }
+  .headerDark{
+    background-image: url(../../assets/images/bg-mobile-light.jpg);
+    
+  
+  }
+}
